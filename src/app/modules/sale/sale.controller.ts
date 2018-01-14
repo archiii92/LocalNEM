@@ -1,7 +1,7 @@
 import { Controller, Get } from '@nestjs/common';
 
 import { SaleService } from './sale.service';
-import { Sale } from './sale.entity';
+import { Sale } from '../../entities';
 
 @Controller('sale')
 export class SaleController {

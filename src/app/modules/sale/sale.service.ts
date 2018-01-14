@@ -1,14 +1,13 @@
-import { Component } from '@nestjs/common';
-import { InjectRepository } from '@nestjs/typeorm';
-import { Repository } from 'typeorm/repository/Repository';
+import { Component, Inject } from '@nestjs/common';
+import { Repository } from 'typeorm';
 
-import { Sale } from './sale.entity';
+import { entityRepositoriesTokens } from '../../constants';
+import { Sale } from '../../entities';
 
 @Component()
 export class SaleService {
   constructor(
-    @InjectRepository(Sale)
-    private readonly saleRepository: Repository<Sale>
+    @Inject(entityRepositoriesTokens.Sale) private readonly saleRepository: Repository<Sale>
   ) {}
 
   async findAll(): Promise<Sale[]> {

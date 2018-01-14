@@ -36,6 +36,29 @@
         "arrow-parens": false,
         "object-literal-sort-keys": false,
         "no-unused-expression": false,
+        "no-console": {
+          "severity": "warning",
+          "options": [
+              "debug",
+              "info",
+              "log",
+              "time",
+              "timeEnd",
+              "trace"
+          ]
+        },
+        "trailing-comma": [
+          true,
+          {
+            "multiline": {
+              "objects": "never",
+              "arrays": "never",
+              "functions": "never",
+              "typeLiterals": "never"
+            },
+            "esSpecCompliant": true
+          }
+        ],
         "max-classes-per-file": [
             false
         ],

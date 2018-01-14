@@ -1,13 +1,12 @@
 import { Module, NestModule, MiddlewaresConsumer } from '@nestjs/common';
-import { TypeOrmModule } from '@nestjs/typeorm';
 
 import { LoggerMiddleware } from '../middlewares/logger.middleware';
 import { SaleModule } from './sale/sale.module';
 import { SaleController } from './sale/sale.controller';
-import { Sale } from './sale/sale.entity';
+import { DatabaseModule } from './database/database.module';
 
 @Module({
-  modules: [TypeOrmModule.forRoot([Sale]), SaleModule],
+  modules: [SaleModule],
   controllers: [],
   components: []
 })
