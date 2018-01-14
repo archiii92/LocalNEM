@@ -1,8 +1,8 @@
 {
-  "name": "local-nem",
+  "name": "local-nem-backend",
   "version": "0.0.2",
-  "description": "LocalNEM",
-  "author": "Denis <https://github.com/archiii92>",
+  "description": "It is LocalNEM project backend part builded on NodeJS + NestJS framework",
+  "author": "Denis Novikov <https://github.com/archiii92>",
   "scripts": {
     "start": "node index.js",
     "start:watch": "nodemon",
@@ -29,7 +29,7 @@
     "typescript": "2.6.2"
   },
   "main": "index.js",
-  "repository": "https://github.com/archiii92/LocalNEM.git",
+  "repository": "https://github.com/archiii92/local-nem-backend.git",
   "license": "MIT",
   "private": true
 }
