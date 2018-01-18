@@ -1,8 +1,11 @@
+# compiled output
+/dist
+
 # dependencies
 /node_modules
 
 # misc
 npm-debug.log
 
-# dist
-/dist
+# vscode
+/.vscode

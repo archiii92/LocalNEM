@@ -13,8 +13,8 @@ export const databaseProviders = [
       password: '12345',
       database: 'localNEM',
       entities: [
-        'src/app/entities.ts',
-        // 'src/app/modules/**/**.entity.ts'
+        // 'src/app/entities.ts',
+        'src/app/modules/**/**.entity.ts'
       ],
       // migrations: [
       //   __dirname + 'migration/**/*.ts'
