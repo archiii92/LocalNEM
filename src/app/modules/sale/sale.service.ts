@@ -12,31 +12,25 @@ export class SaleService {
     @Inject(entityRepositoriesTokens.Sale) private readonly repository: Repository<Sale>
   ) {}
 
-  findAll(): Promise<Sale[]> {
+  findAll() {
     return this.repository.find();
   }
 
-  findOne(id: string): Promise<Sale> {
+  findOne(id: string) {
     return this.repository.findOneById(id);
   }
 
-  create(createSaleDto: CreateSaleDto): Promise<void> {
+  create(createSaleDto: CreateSaleDto) {
     const sale = this.repository.create(createSaleDto);
     console.log(sale);
     return this.repository.insert(sale);
-
-    //const newEntity = this.repository.create(createSaleDto);
-    //console.log(newEntity);
-    //return !!newEntity;
   }
 
-  // async update(updateSaleDto: UpdateSaleDto): Promise<boolean> {
-  //   await this.repository.updateById(updateSaleDto.id, updateSaleDto);
-  //   return true;
-  // }
+  update(updateSaleDto: UpdateSaleDto) {
+    return this.repository.updateById(updateSaleDto.id, updateSaleDto);
+  }
 
-  // async delete(id: string): Promise<boolean> {
-  //   await this.repository.removeById(id);
-  //   return true;
-  // }
+  delete(id: string) {
+    return this.repository.removeById(id);
+  }
 }

@@ -14,29 +14,27 @@ export class SalesController {
   constructor(private readonly service: SaleService) {}
 
   @Get()
-  findAll(): Promise<Sale[]> {
+  findAll() {
     return this.service.findAll();
   }
 
   @Get(':id')
-  findOne(@Param('id') id: string): Promise<Sale> {
-    console.log(id);
+  findOne(@Param('id') id: string) {
     return this.service.findOne(id);
   }
 
   @Post()
   create(@Body() createSaleDto: CreateSaleDto) {
-    console.log(createSaleDto);
     return this.service.create(createSaleDto);
   }
 
-  // @Put()
-  // update(@Body() updateSaleDto: UpdateSaleDto): Promise<void> {
-  //   return this.service.update(updateSaleDto);
-  // }
+  @Put()
+  update(@Body() updateSaleDto: UpdateSaleDto) {
+    return this.service.update(updateSaleDto);
+  }
 
-  // @Delete(':id')
-  // delete(@Param() params): Promise<void> {
-  //   return this.service.delete(params.id);
-  // }
+  @Delete(':id')
+  delete(@Param('id') id: string) {
+    return this.service.delete(id);
+  }
 }

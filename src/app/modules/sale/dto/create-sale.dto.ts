@@ -16,5 +16,6 @@ export class CreateSaleDto {
   @ApiModelProperty()
   @IsInt()
   @IsPositive()
+  @Max(100000)
   readonly unitPrice: number;
 }
