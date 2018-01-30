@@ -1,6 +1,6 @@
 {
   "name": "local-nem-backend",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "It is LocalNEM project backend part builded on NodeJS + NestJS framework",
   "author": "Denis Novikov <https://github.com/archiii92>",
   "scripts": {
