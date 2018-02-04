@@ -1,5 +1,5 @@
-import { ApiModelProperty } from "@nestjs/swagger";
-import { IsUUID, IsInt, Min, Max, IsPositive } from "class-validator";
+import { ApiModelProperty } from '@nestjs/swagger';
+import { IsUUID, IsInt, Min, Max, IsPositive } from 'class-validator';
 
 export class UpdateSaleDto {
   @ApiModelProperty()
@@ -11,7 +11,7 @@ export class UpdateSaleDto {
   @Min(100)
   @Max(100000)
   readonly amountToSell: number;
-  
+
   @ApiModelProperty()
   @IsInt()
   @IsPositive()

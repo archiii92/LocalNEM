@@ -5,7 +5,7 @@
 /node_modules
 
 # misc
-npm-debug.log
+*.log
 
 # vscode
 /.vscode

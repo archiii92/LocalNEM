@@ -12,7 +12,7 @@ export class CreateSaleDto {
   @Min(100)
   @Max(100000)
   readonly amountToSell: number;
-  
+
   @ApiModelProperty()
   @IsInt()
   @IsPositive()
